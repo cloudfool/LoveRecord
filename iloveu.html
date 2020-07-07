@@ -10,6 +10,12 @@
 
 <body>
     <audio src="./1.mp3" autoplay="true" controls="controls" loop="loop"></audio>
+    <script> 
+        document.addEventListener('WeixinJSBridgeReady', function() {
+            document.getElementById('audios').play()
+        })
+    </script>
+
     <div id="back">
         <div class="mask"></div>
         <!-- 设置展示的图片，github pages不能有后台程序只能一条一条手动添加了 囧 -->
