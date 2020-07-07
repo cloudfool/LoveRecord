@@ -126,6 +126,19 @@
          	};
             setInterval(_play, rate);
         }();
+        
+        var start = function() {
+            var index = 0;
+            var rate = 6000;
+            $('#say_1').text(says_1[(index++) % says_1.length]);
+         	var _play = function () {
+         		$('#say_1').hide();
+                $('#say_1').text(says_1[(index++) % says_1.length]);
+                $('#say_1').fadeToggle();
+                $('#carousel').carousel('next');
+         	};
+            setInterval(_play, rate);
+        }();	
 
     });
     </script>
