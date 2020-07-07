@@ -12,21 +12,17 @@
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <audio src="./1.mp3" autoplay="true" id="audio" controls="controls" loop="loop"></audio>
     <script>
-        function autoPlayVideo(){
-            wx.config({
-                debug:false,
-                appId:"",
-                timestamp:1,
-                nonceStr:"",
-                signature:"",
-                jsApiList:[]
-            });
-            wx.ready(function(){
-                var autoplayVideo=document.getElementById("audio");
-                autoplayVideo.play()
-            })
-        };
-        autoPlayVideo();
+        function audioAutoPlay(id){
+            var audio = document.getElementById(id);
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+                }, false);
+            document.addEventListener('YixinJSBridgeReady', function() {
+            audio.play();
+                }, false);
+        }
+        audioAutoPlay("audio");//xxx是你audio标签的id
     </script>
     
     
