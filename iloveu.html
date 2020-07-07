@@ -10,6 +10,7 @@
 
 <body>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <audio src="./1.mp3" autoplay="true" controls="controls" loop="loop"></audio>
     <script>
         function autoPlayVideo(){
             wx.config({
@@ -27,12 +28,8 @@
         };
         autoPlayVideo();
     </script>
-    <audio src="./1.mp3" autoplay="true" controls="controls" loop="loop"></audio>
-    <script> 
-        document.addEventListener('touchstart', function() {
-            document.getElementById('audios').play()
-        })
-    </script>
+    
+    
 
     <div id="back">
         <div class="mask"></div>
